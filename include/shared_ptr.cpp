@@ -83,13 +83,8 @@ auto shared_ptr<T>::swap(shared_ptr& other) -> void
 template <typename T>
 auto shared_ptr<T>::reset() -> void
 {
-	if (ptr_ != nullptr && counter_ != nullptr && --(*counter_) == 0)
-	{
-		delete ptr_;
-		delete counter_;
-	}
-	ptr_ = nullptr;
-	counter_ = nullptr;
+	shared_ptr<T> buff();
+	this->swap(buff);
 }
 
 template <typename T>
