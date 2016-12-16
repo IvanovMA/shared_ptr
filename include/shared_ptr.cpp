@@ -83,7 +83,7 @@ auto shared_ptr<T>::swap(shared_ptr& other) -> void
 template <typename T>
 auto shared_ptr<T>::reset() -> void
 {
-	shared_ptr<T> buff();
+	shared_ptr<T> buff;
 	this->swap(buff);
 }
 
